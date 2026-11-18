@@ -1,7 +1,7 @@
 {
   "source": "https://www.d2core.com/d2r",
-  "version": "3.3.0",
-  "syncedAt": "2026-11-02T12:01:07.518159+00:00",
+  "version": "3.4.0",
+  "syncedAt": "2026-11-18T02:08:08.737104+00:00",
   "modules": {
     "runeword": "符文之语",
     "unique": "暗金物品",
@@ -14,17 +14,17 @@
     "rune": "符文"
   },
   "pages": {
-    "runeword": "/assets/d2r-data-runeword.LsJGDAW3.js",
-    "unique": "/assets/d2r-data-unique.Boj9l7nv.js",
-    "set": "/assets/d2r-data-set.CEVn3jcF.js",
-    "normal": "/assets/d2r-data-normal.Bp3BXCg8.js",
-    "cube": "/assets/d2r-data-cube.Bluz361Y.js",
-    "craft": "/assets/d2r-data-craft.WDypWJVy.js",
-    "affix": "/assets/d2r-data-affix.B1fmkmxM.js",
-    "skill": "/assets/d2r-data-skill.Du-GyKh1.js",
-    "rune": "/assets/d2r-data-rune.CVM30cFS.js"
+    "runeword": "/assets/d2r-data-runeword.DArCKFAH.js",
+    "unique": "/assets/d2r-data-unique.C_oT0pEF.js",
+    "set": "/assets/d2r-data-set.hEbTnwEy.js",
+    "normal": "/assets/d2r-data-normal.BU7zQ71Y.js",
+    "cube": "/assets/d2r-data-cube.BJLfR9mp.js",
+    "craft": "/assets/d2r-data-craft.COzYmLYQ.js",
+    "affix": "/assets/d2r-data-affix.BUjHiI1r.js",
+    "skill": "/assets/d2r-data-skill.CL4dmM95.js",
+    "rune": "/assets/d2r-data-rune.zv4CwTFw.js"
   },
-  "main": "/assets/index-nyHDpP-q.js",
+  "main": "/assets/index-D8nNDlOx.js",
   "css": [
     "/assets/affix-DrGzLn70.css",
     "/assets/back-btn-ByKEiHY1.css",
@@ -34,13 +34,13 @@
     "/assets/content-layout-DZ-UhkV-.css",
     "/assets/craft-CEq1JoCo.css",
     "/assets/cube-BKIgWynF.css",
-    "/assets/d2r-db-item-CI7B_GKL.css",
-    "/assets/database-layout-Bx-ZWPJ3.css",
-    "/assets/database-line-cCc7qUly.css",
-    "/assets/database-table-FHk7d0gn.css",
-    "/assets/dropdown-actions-CxA_2xtU.css",
+    "/assets/d2r-db-item-CH-zyWxT.css",
+    "/assets/database-layout-BNCBCDyH.css",
+    "/assets/database-line-DsNydwbe.css",
+    "/assets/database-table-CDUD-DG6.css",
+    "/assets/dropdown-actions-Do8amr38.css",
     "/assets/dropdown-menu-C7GPAA3N.css",
-    "/assets/index-Dkw8dszX.css",
+    "/assets/index-BFydNjMD.css",
     "/assets/normal-BcicPuEt.css",
     "/assets/runeword-CDtyjX63.css",
     "/assets/set-WzMnAAyD.css",
@@ -64,6 +64,6 @@
     "magicSuffix": 583,
     "skills": 425
   },
-  "images": 442,
+  "images": 444,
   "missingImages": 0
 }

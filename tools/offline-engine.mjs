@@ -20,3 +20,5 @@ export function mountOffline(component,database){
  window.__D2_OFFLINE__={vm,Data,getDBItems,getDBSkills,getCubeRecipes};
  return vm;
 }
+
+export {getItemInfo as offlineItemInfo};

@@ -9,7 +9,7 @@ export function installTooltips(engine){
   let type,id,data;
   if(value.startsWith('{')){const hint=JSON.parse(value);type=hint.type?.replace('d2r_','');data=hint.data;id=data?.id}
   else{if(!value.startsWith('d2r_'))return;const colon=value.indexOf(':');if(colon<0)return;type=value.slice(4,colon);id=value.slice(colon+1)}
-  const info=engine.cc({id,type,data,fromDB:true});if(!info?.desc?.length)return;
+  const info=engine.offlineItemInfo({id,type,data,fromDB:true});if(!info?.desc?.length)return;
   box.replaceChildren();
   for(const line of info.desc){
    const row=document.createElement('div');row.className='offline-tooltip-line';

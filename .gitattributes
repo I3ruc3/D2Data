@@ -1,1 +1,2 @@
 dist/encyclopedia/** -text
+dist/data/d2r/**/*.d2r -text
