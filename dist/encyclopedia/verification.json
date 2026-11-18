@@ -1,6 +1,6 @@
 {
   "non_ascii_content_preserved": true,
-  "text_files_checked": 419,
+  "text_files_checked": 538,
   "changed_non_ascii_files": [],
   "successful_archive_records_checked": 3154,
   "archived_paths_not_saved": [],
@@ -89,6 +89,146 @@
       "path": "images/items/elite/stormlash.gif",
       "status": 200,
       "bytes": 990
+    },
+    {
+      "path": "basics/levels.htm",
+      "status": 200,
+      "bytes": 49865
+    },
+    {
+      "path": "monsters/act1-Wraith.htm",
+      "status": 200,
+      "bytes": 64304
+    },
+    {
+      "path": "d1beta/quest1.htm",
+      "status": 200,
+      "bytes": 19844
+    },
+    {
+      "path": "images/diablo_images/list_npc_on.jpg",
+      "status": 200,
+      "bytes": 5132
+    },
+    {
+      "path": "sounds/npc-voices/act5/larzuk.wav",
+      "status": 200,
+      "bytes": 33088
+    },
+    {
+      "path": "pdf/blood.pdf",
+      "status": 200,
+      "bytes": 6636
     }
-  ]
+  ],
+  "live_source_recovery": {
+    "date": "2026-11-18",
+    "prior_missing_targets_checked": 724,
+    "prior_missing_files_recovered": 600,
+    "prior_missing_links_repaired": 3,
+    "additional_linked_files_recovered": 580,
+    "recovered_files": 1180,
+    "recovered_by_extension": {
+      ".gif": 521,
+      ".htm": 119,
+      ".jpg": 490,
+      ".pdf": 4,
+      ".rar": 44,
+      ".txt": 1,
+      ".wav": 1
+    },
+    "local_recovery_bytes": 173191063,
+    "recovered_from_case_variant": [
+      "diablo/hellfire/images/biclopsml.JPG",
+      "diablo/hellfire/images/gravediglrg.JPG",
+      "diablo/hellfire/images/hellboresml.JPG",
+      "diablo/monsters/act1-Wraith.htm"
+    ],
+    "remaining_original_missing_targets": 121,
+    "remaining_missing_targets": 127,
+    "responses_failing_integrity_checks": [
+      {
+        "url": "https://wiki.d.163.com/diablo/sounds/npc-voices/act4/Tyreal.wav",
+        "source_bytes": 50488,
+        "source_sha256": "d7844e532db91938c3256460afb7ffbc255fcdd61a3c0e112ebdd246b0c161fd",
+        "reason": "WAV PCM partial 50444/54142"
+      },
+      {
+        "url": "https://wiki.d.163.com/diablo/sounds/npc-voices/act5/malah.wav",
+        "source_bytes": 56948,
+        "source_sha256": "34b90d0eac8e037a295d38fa3e068a655d5eccfb4f5b84176f8401e453f65b31",
+        "reason": "WAV PCM partial 52852/56938"
+      },
+      {
+        "url": "https://wiki.d.163.com/diablo/sounds/npc-voices/act5/nihlathak.wav",
+        "source_bytes": 56884,
+        "source_sha256": "1a0e70cdd6fb37d231959f93efec3c2dca13b7c12babb57e6887e6c0f7abd504",
+        "reason": "WAV PCM partial 56840/66046"
+      },
+      {
+        "url": "https://wiki.d.163.com/diablo/sounds/npc-voices/act5/anya.wav",
+        "source_bytes": 29228,
+        "source_sha256": "e11db5875f06644fb0ebe2968af0eed146947ef140cc5c297d833f9b4458092a",
+        "reason": "WAV PCM partial 25132/38016"
+      },
+      {
+        "url": "https://wiki.d.163.com/diablo/sounds/npc-voices/act5/qual-kehk.wav",
+        "source_bytes": 43792,
+        "source_sha256": "c8b88f484593217aa951e5c5f6194c56b52f6e9a59f9336909b51cdcdf7f1ada",
+        "reason": "WAV PCM partial 39696/45312"
+      },
+      {
+        "url": "https://wiki.d.163.com/diablo/hellfire/images/gnatsting.gif",
+        "source_bytes": 4262,
+        "source_sha256": "fc0f72be210e3bc43f1b9009ef25e25fa87c0c5d1eee1ddf18e7d8d725e73727",
+        "reason": "GIF ends without trailer"
+      },
+      {
+        "url": "https://wiki.d.163.com/diablo/images/other/iwantd3/iwd330l.jpg",
+        "source_bytes": 581056,
+        "source_sha256": "1fca6d4e9229fd70a3dfc13942d945126604e1b95a9c003b82baaa50ac8def55",
+        "reason": "JPEG ends without end marker"
+      },
+      {
+        "url": "https://wiki.d.163.com/diablo/images/cc/cc06.jpg",
+        "source_bytes": 42380,
+        "source_sha256": "f4df25a565a5933f45218a1399f1208ffc5aa3590a511511cd6a68f64a9ccefb",
+        "reason": "OSError('image file is truncated (19 bytes not processed)')"
+      },
+      {
+        "url": "https://wiki.d.163.com/diablo/images/cc/cc05.jpg",
+        "source_bytes": 36468,
+        "source_sha256": "910f61487390d85219f93dd129602c226a3b96bdf043ff5dd632d460242db86e",
+        "reason": "OSError('image file is truncated (14 bytes not processed)')"
+      },
+      {
+        "url": "https://wiki.d.163.com/diablo/images/cc/cc07.jpg",
+        "source_bytes": 29228,
+        "source_sha256": "e7d919898ec0822d02b2f65b32c9b51801e3698a45a1e937db8aa9b4993bdaa8",
+        "reason": "OSError('image file is truncated (0 bytes not processed)')"
+      },
+      {
+        "url": "https://wiki.d.163.com/diablo/images/cc/cc08.jpg",
+        "source_bytes": 36468,
+        "source_sha256": "028aed99b8c2752913fa2fea97f925c2ceb6471bd5be4bf399e83753903c67d5",
+        "reason": "OSError('image file is truncated (37 bytes not processed)')"
+      },
+      {
+        "url": "https://wiki.d.163.com/diablo/images/cc/cc09.jpg",
+        "source_bytes": 34312,
+        "source_sha256": "7929d93f06b3c6bc5d3735627eaa08e2b200ac91ce2b4091bdfb495822035655",
+        "reason": "OSError('image file is truncated (9 bytes not processed)')"
+      },
+      {
+        "url": "https://wiki.d.163.com/diablo/images/cc/cc01.jpg",
+        "source_bytes": 49708,
+        "source_sha256": "7f620525f9e724cb1bafb6bf42fff088c3f618b6e0558d05c0e86a1b2e0ff103",
+        "reason": "OSError('image file is truncated (32 bytes not processed)')"
+      }
+    ],
+    "local_http_files_verified": 1180,
+    "local_http_repaired_links_verified": 4,
+    "new_page_case_links_repaired": 1,
+    "local_http_files_matching_source_sha256": 1179
+  }
 }
