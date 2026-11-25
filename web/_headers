@@ -1,7 +1,6 @@
-# Cloudflare static asset caching. Fingerprinted bundles never change in place;
-# data files keep their names across re-syncs, so they are revalidated.
+# Local builds can rewrite bundles under their upstream names. Revalidate on reuse.
 /assets/*
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: no-cache
 /data/*
   Cache-Control: no-cache
 /items/*

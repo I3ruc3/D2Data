@@ -63,7 +63,6 @@ button,a,select{-webkit-tap-highlight-color:transparent}
 #app{min-height:calc(100vh - var(--shell-h))}
 .offline-database-page{box-sizing:border-box;width:min(var(--page-w),100%);margin:0 auto;padding:30px 24px 64px;min-width:0}
 .page-hero{margin:0 0 22px}
-.page-eyebrow{margin:0 0 6px;font:600 11px/1.4 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--subtle)}
 .offline-page-title{margin:0;font-family:var(--serif);font-size:30px;font-weight:600;line-height:1.25;letter-spacing:.06em;background:linear-gradient(180deg,#f6e2b4 0%,#d6b26c 60%,#a9834a 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .page-lede{margin:10px 0 0;color:var(--muted);font-size:14px;line-height:1.7;max-width:60ch}
 
@@ -147,7 +146,6 @@ dialog a{color:var(--gold);text-underline-offset:3px}
 .boss-next{display:flex;justify-content:space-between;align-items:baseline;margin:0}
 .boss-label{font-size:13px;color:var(--muted)}
 .boss-spawn-time{font-size:16px;color:var(--text);font-variant-numeric:tabular-nums;letter-spacing:.02em}
-.boss-schedule-note{margin:20px 0 0;color:var(--subtle);font-size:12px;line-height:1.6}
 .boss-card.boss-soon{border-color:rgba(208,100,58,.65);box-shadow:0 0 0 1px rgba(208,100,58,.25),0 0 40px -10px rgba(208,100,58,.45)}
 .boss-card.boss-soon .boss-time-number{color:#ffb38c;border-color:rgba(208,100,58,.5)}
 .boss-card.boss-soon .boss-progress i{background:linear-gradient(90deg,#9b3d1d,var(--ember),#ffb38c)}
