@@ -1,7 +1,11 @@
 {
-  "non_ascii_content_preserved": true,
-  "text_files_checked": 538,
-  "changed_non_ascii_files": [],
+  "non_ascii_content_preserved": false,
+  "text_files_checked": 1007,
+  "changed_non_ascii_files": [
+    "diablo/items/cube.htm",
+    "diablo/shrines.htm",
+    "diablo/skills/amazon-passive.htm"
+  ],
   "successful_archive_records_checked": 3154,
   "archived_paths_not_saved": [],
   "local_http_checks": [
@@ -230,5 +234,55 @@
     "local_http_repaired_links_verified": 4,
     "new_page_case_links_repaired": 1,
     "local_http_files_matching_source_sha256": 1179
+  },
+  "official_source_audit": {
+    "date": "2026-11-25",
+    "authority": "Blizzard The Arreat Summit; classic Diablo II / Lord of Destruction",
+    "legacy_files_verified": 3560,
+    "legacy_pages_checked": 537,
+    "net_ease_live_page_status": {
+      "byte_identical": 524,
+      "http_404": 13
+    },
+    "blizzard_page_correspondence": {
+      "corresponding_article": 431,
+      "outside_arreat_summit_scope": 103,
+      "no_corresponding_article": 3
+    },
+    "legacy_pages_with_official_links": 431,
+    "official_offline_html": 469,
+    "official_supporting_assets": 214,
+    "existing_official_image_sources_reverified": 1598,
+    "asset_comparison_status": {
+      "byte_identical": 1784,
+      "no_official_file": 530,
+      "truncated_official_original_restored": 2,
+      "same_path_different_bytes": 7,
+      "official_original_recovered": 36
+    },
+    "legacy_missing_items_resolved": 86,
+    "blizzard_pages_restored_at_missing_paths": 50,
+    "official_media_restored_at_missing_paths": 36,
+    "old_truncated_local_images_repaired": 2,
+    "validated_content_corrections": 6,
+    "legacy_articles_with_corrections": 6,
+    "legacy_missing_items_remaining": 41,
+    "original_payloads_checked": 4280,
+    "known_source_corrections": [
+      "diablo/items/cube.htm",
+      "diablo/items/magic/largecharms.htm",
+      "diablo/items/normal/uamulets.htm",
+      "diablo/monsters/act1-gargoyletrap.htm",
+      "diablo/shrines.htm",
+      "diablo/skills/amazon-passive.htm"
+    ],
+    "published_http_paths_checked": 938,
+    "browser_checks": [
+      "legacy_home_to_official_portal",
+      "official_monster_bestiary",
+      "mobile_runeword_table",
+      "amulet_value",
+      "restored_tyrael_audio"
+    ]
   }
 }
