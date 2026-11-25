@@ -13,6 +13,11 @@ const BossTimer = (() => {
     return next;
   }
 
+  function fmtInterval(secs) {
+    const h = Math.floor(secs / 3600), m = Math.round((secs % 3600) / 60);
+    return (h ? h + ' 小时' : '') + (m ? (h ? ' ' : '') + m + ' 分钟' : '');
+  }
+
   function fmtCountdown(totalSecs, hasHours) {
     if (hasHours) {
       const h = Math.floor(totalSecs / 3600);
@@ -47,7 +52,7 @@ const BossTimer = (() => {
       key: 'world', title: '世界首领',
       base: new Date(schedule.world.baseTime).getTime(),
       interval: schedule.world.intervalSeconds * 1000,
-      els: { spawn: document.getElementById('w-spawn'), h: document.getElementById('w-h'), m: document.getElementById('w-m'), s: document.getElementById('w-s') },
+      els: { spawn: document.getElementById('w-spawn'), h: document.getElementById('w-h'), m: document.getElementById('w-m'), s: document.getElementById('w-s'), bar: document.getElementById('w-bar'), interval: document.getElementById('w-interval') },
       card: document.querySelector('.boss-card.world'),
       prev: null, next: 0, hasHours: true, notifiedFor: -1,
     };
@@ -55,7 +60,7 @@ const BossTimer = (() => {
       key: 'normal', title: '巢穴首领',
       base: new Date(schedule.normal.baseTime).getTime(),
       interval: schedule.normal.intervalSeconds * 1000,
-      els: { spawn: document.getElementById('n-spawn'), m: document.getElementById('n-m'), s: document.getElementById('n-s') },
+      els: { spawn: document.getElementById('n-spawn'), m: document.getElementById('n-m'), s: document.getElementById('n-s'), bar: document.getElementById('n-bar'), interval: document.getElementById('n-interval') },
       card: document.querySelector('.boss-card.normal'),
       prev: null, next: 0, hasHours: false, notifiedFor: -1,
     };
@@ -67,8 +72,10 @@ const BossTimer = (() => {
       if (cfg.notifiedFor !== -1 && now >= cfg.notifiedFor && cfg.next > cfg.notifiedFor) onSpawn(cfg);
       cfg.notifiedFor = cfg.next;
 
-      cfg.els.spawn.textContent = fmtDate(cfg.next);
+      if (cfg.shownNext !== cfg.next) { cfg.els.spawn.textContent = fmtDate(cfg.next); cfg.shownNext = cfg.next; }
       const remaining = Math.max(0, cfg.next - now);
+      // Cycle progress drives a compositor-only transform.
+      if (cfg.els.bar) cfg.els.bar.style.transform = 'scaleX(' + (1 - remaining / cfg.interval).toFixed(4) + ')';
       const totalSecs = Math.floor(remaining / 1000);
       const h = Math.floor(totalSecs / 3600);
       const m = Math.floor((totalSecs % 3600) / 60);
@@ -91,6 +98,8 @@ const BossTimer = (() => {
 
       return totalSecs;
     }
+
+    for (const cfg of [WORLD, NORMAL]) if (cfg.els.interval) cfg.els.interval.textContent = '每 ' + fmtInterval(cfg.interval / 1000);
 
     const TICK_MS_VISIBLE = 1000;
     const TICK_MS_HIDDEN = 5000;

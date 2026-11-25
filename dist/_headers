@@ -1,0 +1,14 @@
+# Cloudflare static asset caching. Fingerprinted bundles never change in place;
+# data files keep their names across re-syncs, so they are revalidated.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+/data/*
+  Cache-Control: no-cache
+/items/*
+  Cache-Control: public, max-age=2592000
+/data_img/*
+  Cache-Control: public, max-age=2592000
+/app/*
+  Cache-Control: public, max-age=2592000
+/encyclopedia/*
+  Cache-Control: public, max-age=86400

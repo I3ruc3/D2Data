@@ -22,7 +22,12 @@ class Handler(SimpleHTTPRequestHandler):
             if unquote(path).lstrip('/') in known:self.path='/missing.svg'
         return super().do_GET()
     def end_headers(self):
-        self.send_header('Cache-Control','no-cache');self.send_header('X-Content-Type-Options','nosniff');super().end_headers()
+        path=urlsplit(self.path).path
+        # Fingerprinted bundles never change in place; skip revalidation for them.
+        if path.startswith('/assets/'):self.send_header('Cache-Control','public, max-age=31536000, immutable')
+        elif path.startswith(('/items/','/data_img/','/app/')):self.send_header('Cache-Control','public, max-age=86400')
+        else:self.send_header('Cache-Control','no-cache')
+        self.send_header('X-Content-Type-Options','nosniff');super().end_headers()
     def list_directory(self,path):return self.send_error(404)
     def log_message(self,fmt,*args):
         if len(args)>1 and str(args[1]) not in ('200','304'):super().log_message(fmt,*args)

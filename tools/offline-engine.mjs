@@ -15,10 +15,13 @@ export function mountOffline(component,database){
  appVm={$i18n:i18n,$store:store,$route:{query:Object.fromEntries(new URLSearchParams(location.search))},globalData:{}};
  if(!Data.loaded)loadData(...database);
  const vm=app.mount('#app');offlineApp=app;
- offlineScroll=()=>{const table=vm.$refs.table;if(table&&window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-350)table.loadMore()};
+ // One layout read per frame at most, instead of one per scroll event.
+ let queued=false;
+ offlineScroll=()=>{if(queued)return;queued=true;requestAnimationFrame(()=>{queued=false;const table=vm.$refs.table;if(table&&window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-600)table.loadMore()})};
  window.addEventListener('scroll',offlineScroll,{passive:true});
  window.__D2_OFFLINE__={vm,Data,getDBItems,getDBSkills,getCubeRecipes};
  return vm;
 }
 
-export {getItemInfo as offlineItemInfo};
+// Stable names for the local layout wrappers; minified export aliases change between releases.
+export {getItemInfo as offlineItemInfo,createVNode as offlineH,isMobile as offlineIsMobile};
